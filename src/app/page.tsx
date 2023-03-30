@@ -11,6 +11,8 @@ export default function Home() {
     if (sessionData !== null && sessionData !== undefined) {
       setUser(sessionData.user?.name)
     }
+
+    console.log(sessionData)
   }, [sessionData])
 
   return (
