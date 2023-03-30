@@ -1,3 +1,4 @@
+import 'windi.css'
 import './globals.css'
 
 export const metadata = {
