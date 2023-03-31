@@ -3,6 +3,8 @@ import './globals.css'
 import { Session } from 'next-auth'
 import { headers } from 'next/headers'
 import AuthContext from './auth-context'
+import { Container } from 'components/atoms'
+import { Navbar } from 'components/molecules'
 
 export const metadata = {
   title: 'Carefy',
@@ -31,7 +33,12 @@ export default async function RootLayout({
     <html lang='en'>
       <head />
       <body>
-        <AuthContext session={session}>{children}</AuthContext>
+        <AuthContext session={session}>
+          <Navbar />
+          <Container>
+            <main className='py-6'>{children}</main>
+          </Container>
+        </AuthContext>
       </body>
     </html>
   )

@@ -5,5 +5,14 @@ export default defineConfig({
     include: ['**/*.{jsx,tsx,css}'],
     exclude: ['node_modules', '.git', '.next']
   },
-  plugins: [require('windicss/plugin/forms')]
+  theme: {
+    extend: {
+      backgroundColor: {
+        carefy: '#0073d8'
+      },
+      textColor: {
+        carefy: '#0073d8'
+      }
+    }
+  }
 })
