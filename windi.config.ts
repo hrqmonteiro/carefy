@@ -10,6 +10,9 @@ export default defineConfig({
       backgroundColor: {
         carefy: '#0073d8'
       },
+      borderColor: {
+        carefy: '#0073d8'
+      },
       textColor: {
         carefy: '#0073d8'
       }

@@ -7,6 +7,9 @@ import { env } from 'server/env/server'
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
+  pages: {
+    signIn: '/auth/signin'
+  },
   providers: [
     GithubProvider({
       clientId: env.GITHUB_CLIENT_ID,

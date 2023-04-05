@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { Button, Container, Logo } from 'components/atoms'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
@@ -23,7 +24,9 @@ export default function Navbar() {
     <div className='sticky top-0 w-full min-h-20 shadow-lg py-4'>
       <Container>
         <div className='flex flex-wrap md:flex-nowrap justify-between items-center'>
-          <Logo width={120} />
+          <Link href='/'>
+            <Logo width={120} />
+          </Link>
           {status === 'authenticated' ? (
             <div className='flex flex-nowrap items-center'>
               <span>Olá,</span>
